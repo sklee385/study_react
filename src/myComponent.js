@@ -3,13 +3,8 @@ import propTypes from 'prop-types';
 
 
 class MyComponent extends Component {
-
-    constructor(props) {
-        super(props);
-        // state 초기값 설정
-        this.state = {
-            number : 0 
-        }
+    state = {
+        number : this.props.age   
     }
 
     static defaultProps = {
@@ -20,13 +15,18 @@ class MyComponent extends Component {
         age: propTypes.number.isRequired
     }
 
-
     render() {
         return (
             <div>
                 안녕하세요 제 이름은 {this.props.name}입니다.<br />
                 나이는 {this.props.age} 입니다. <br />
                 숫자 : {this.state.number}
+                <button onClick={ ()=>{
+                    this.setState({
+                        number : this.state.number +1 
+                    });
+                }
+                }>click</button>
             </div>
         );
     }
