@@ -3,16 +3,19 @@ import React, { Component } from "react";
 // import EventPractice from './EventPractice';
 //import ValidationSample from './ValidationSample';
 //import ScrollBox from './ScrollBox';
-// import InterationSample from './InterationSample'
-// import LifeSycleSample from './LifeSycleSample';
-import ComponentFunction from './ComponentFunction';
+import InterationSample from './InterationSample'
 
 class App extends Component {
+
+    onButton = () => {
+        this.scrollBox.scrollToBottom();
+        console.log(this.scrollBox);
+    }
 
     render() {
         return (
             <div>
-                <ComponentFunction name={'홍길동'} />
+                <InterationSample />
             </div>
         );
     }

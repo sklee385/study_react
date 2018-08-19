@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
+import './ValidationSample.css'
 
-class ValidationSample extends Comment{
+class ValidationSample extends Component{
     state = {
         password : '',
         clicked : false , 
@@ -19,13 +20,24 @@ class ValidationSample extends Comment{
             clicked : true ,
             validated : this.state.password === '000'
         });
+
+        this.input.focus();
     }
 
     render (){
         return (
             <div>
-                <input type='password' value={this.state.password}/>
+                <input 
+                    ref={(ref)=>{this.input=ref}}
+                    type='password' 
+                    value={this.state.password} 
+                    onChange={this.handleChange}
+                    className={this.state.clicked ? (this.state.validated ? 'success' : 'failure') : ''}
+                    />
+                <button onClick={this.handleButtonClick}>확인   </button>
             </div>
         ); 
     }
 }
+
+export default ValidationSample;
