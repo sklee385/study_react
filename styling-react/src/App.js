@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
-import styles from './App.css';
+import button from './components/button';
+
+
 
 class App extends Component {
     render() {
         return (
-            <div >
-                {/* 
-                    <div class={[styles.box, styles.blue].join(' ')}>
-                    </div>
-                */}
-            </div>
+            <div>
+            <button>버튼</button>
+          </div>
         );
     }
 }
