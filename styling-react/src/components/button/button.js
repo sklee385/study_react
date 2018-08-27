@@ -5,7 +5,7 @@ import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
 console.log(styles);
 
-const button = ({children, ...rest}) => {
+const Button = ({children, ...rest}) => {
     return (
         <div className={cx('button')} {...rest}>
             {children}
@@ -13,4 +13,4 @@ const button = ({children, ...rest}) => {
     );
 }
 
-export default button;
+export default Button;
