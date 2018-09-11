@@ -4,11 +4,15 @@ import { Home, About, Posts } from 'pages'
 import Menu from 'componentes/Menu';
 
 class App extends Component {
+
     render () {
+
         return (
             <div>
                 <div>
                     <Menu />
+                </div>
+                <div>
                 </div>
                 <Route exact path="/" component={Home}/>
                 <Switch>
