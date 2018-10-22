@@ -51,13 +51,16 @@
     "whatwg-fetch": "2.0.3"
   },
   "scripts": {
-    "build": "cross-env NODE_PATH=src node scripts/build.js",
     "start": "cross-env NODE_PATH=src node scripts/start.js",
-    "test": "node scripts/test.js --env=jsdom",
-    "server": "node src/server"
+    "start:server": "node server",
+    "build": "cross-env NODE_PATH=src node scripts/build.js",
+    "build:server": "cross-env NODE_PATH=src node scripts/build.server.js",
+    "test": "node scripts/test.js --env=jsdom"
+    
   },
   "devDependencies": {
-    "cross-env": "^5.2.0"
+    "cross-env": "^5.2.0",
+    "ignore-loader": "^0.1.2"
   },
   "jest": {
     "collectCoverageFrom": [
